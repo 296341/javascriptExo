@@ -14,15 +14,17 @@ get Xaxis(){
 }
     
 set Yaxis(y){
-   return this.y;
+    this.y;
 }
 
 set Xaxis(x){
-    return this.x;
+    this.x;
  }
 
 }
 
-let user = new Point('john', 'antoine')
+module.exports = Point;
 
-console.log(user.Yaxis)
+//let user = new Point(7, 9)
+
+//console.log(user.Xaxis, user.Yaxis)
