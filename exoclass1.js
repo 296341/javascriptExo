@@ -19,3 +19,11 @@ class Hippopotamus {
         return `Name: ${this.name} : weight: ${this.weight } tusksSize: ${this.tusksSize}`  
     }
 }
+
+let hippo = new Hippopotamus('thomas', 84, 18)
+
+console.log(hippo.swim())
+
+console.log(hippo.eat())
+
+console.log(hippo.toString())
