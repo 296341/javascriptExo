@@ -7,15 +7,15 @@ class Hippopotamus {
     }
 
     swim(){
-        return this.weight-0.3 ;
+        return this.weight  -=  0.3 ;
     }
 
     eat(){
-        return this.weight+1.0 ;
+        return this.weight  +=  1.0 ;
     }
 
 
-    str(){
-        return "Name: " + str(this.name) + ", weight: " + str(this.weight) + ", tusksSize: " + str(this.tusksSize) + "."
+    toString(){
+        return `Name: ${this.name} : weight: ${this.weight } tusksSize: ${this.tusksSize}`  
     }
 }
