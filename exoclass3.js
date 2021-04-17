@@ -1,13 +1,10 @@
 const Point = require("./exoClass2");
 
-var points = new Point(8, 4);
-
 class Circle extends Point{
 
-    constructor(point1, point2, raduis){
+    constructor(point, raduis){
         super()
-        this.point1 = point1
-        this.point2 = point2;
+        this.point = point;
         this.raduis = raduis;
     }
 
@@ -15,9 +12,9 @@ class Circle extends Point{
     return Math.PI * this.raduis * this.raduis; 
   }
 
-  containPoint(){
-    const diffx = points.Xaxis - this.point1
-    const diffy = points.Yaxis - this.point2
+  containPoint(p){
+    const diffx = this.point.getX() - p.getX();
+    const diffy = this.point.getY() - p.getY();
 
     console.log(`diffy :${diffy}`)
     console.log(`diffx :${diffx}`)
@@ -34,15 +31,21 @@ class Circle extends Point{
   }
 
   toString(){
-    return `x1: ${this.point1} y1: ${this.point2 } raduis: ${this.raduis}`  
+    return `x1: ${this.point.getX()} y1: ${this.point.getY() } raduis: ${this.raduis}`  
 }
 }
 
 
 
-let c = new Circle(3,2,7)
+let ppoint = new Point(7, 9);
+ppoint.setX(8);
 
-console.log(`${c.containPoint()}`)
+let pointOne = new Point(7, 9);
+let pointTwo = new Point(5, 6);
+
+let c = new Circle(pointOne,7);
+
+console.log(`${c.containPoint(pointTwo)}`)
 
 console.log(`the area is : ${c.areaCircle()}`)
 

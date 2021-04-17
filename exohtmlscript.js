@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
     }
 
 
-   
+
 
     function myJquery(){
 

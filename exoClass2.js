@@ -5,26 +5,27 @@ class Point {
         this.x = x
     }
 
-get Yaxis(){
-    return `${this.y}`
+getY(){
+    return `${this.y}`;
 }
 
-get Xaxis(){
+getX(){
     return `${this.x}`;
 }
     
-set Yaxis(y){
-    this.y;
+setY(value){
+    this.y = value;
 }
 
-set Xaxis(x){
-    this.x;
+setX(value){
+    this.x = value;
  }
 
 }
 
+
 module.exports = Point;
 
-//let user = new Point(7, 9)
+//let pointOne = new Point(7, 9)
 
-//console.log(user.Xaxis, user.Yaxis)
+//console.log(pointOne.getY, point.getX)
